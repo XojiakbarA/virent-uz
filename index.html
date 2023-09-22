@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ViRent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#00DA0B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav id="header" class="flex items-center px-3 fixed w-screen z-10">
+        <a class="flex-1 mr-10" href="#home">
+            <img src="assets/logo/logo-dark.png" alt="logo"/>
+        </a>
+        <select class="bg-brand p-1 rounded-full text-white hover:bg-transparent hover:text-brand duration-300">
+            <option selected value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+        </select>
+        <ul class="text-start">
+            <li class="lang list-none inline-block px-5 hover:text-brand duration-300"><a href="#about">About</a></li>
+            <li class="list-none inline-block px-5 hover:text-brand duration-300"><a href="#whyvirent">Why ViRent?</a></li>
+            <li class="list-none inline-block px-5 hover:text-brand duration-300"><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="bg-brand rounded-full py-2 px-4 inline-block text-white hover:bg-transparent hover:text-brand hover:border hover:border-brand border border-transparent duration-300" href="#downloadapp">
+            Download App
+        </a>
+    </nav>
+    <div id="fullpage">
+        <section class="section h-screen">
+            <div class="overflow-hidden h-screen relative flex items-center justify-between">
+                <div class="w-1/2">
+                    <img class="floating" id="scooter" src="assets/images/scooter.png" alt="scooter">
+                </div>
+                <div class="w-1/2 flex-col items-end">
+                    <h1 class="text-6xl leading-normal">ViRent - <span class="font-light">Choose the best!</span></h1>
+                    <p>ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section h-screen">
+            <div class="m-4">
+                <div class="p-4 flex flex-row mb-4">
+                    <div class="basis-1/3 rounded-xl overflow-hidden mr-4 hover:drop-shadow-xl duration-300 drop-shadow-lg animate__animated animate__fadeInLeft animate__delay-1s">
+                        <img src="assets/images/about1.jpeg" alt="about1">
+                    </div>
+                    <div class="basis-2/3">
+                        <h2 class="text-3xl pb-5 text-end animate__animated animate__fadeIn animate__delay-1s">Who Are We?</h2>
+                        <p class="text-xl text-end animate__animated animate__fadeIn animate__delay-2s">ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan. We are committed to building a future where transportation is shared, affordable and environmentally friendly.</p>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-row">
+                    <div class="basis-2/3">
+                        <h2 class="text-3xl pb-5 animate__animated animate__fadeIn animate__delay-1s">What we do?</h2>
+                        <p class="text-xl animate__animated animate__fadeIn animate__delay-2s">We provide convenient and reliable short-term rental of electric scooters at an affordable price in major cities of Uzbekistan.</p>
+                    </div>
+                    <div class="basis-1/3 rounded-xl overflow-hidden ml-4 hover:drop-shadow-xl duration-300 drop-shadow-lg animate__animated animate__fadeInRight animate__delay-1s">
+                        <img src="assets/images/about2.webp" alt="about1">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section h-screen">
+            <div class="relative">
+                <div class="max-h-96 blur-sm opacity-80 overflow-hidden">
+                    <img src="assets/images/whyvirent.jpeg" alt="whyvirent" width="100%">
+                </div>
+                <div class="absolute left-0 top-10 m-2">
+                    <h2 class="text-6xl text-white leading-normal animate__animated animate__fadeIn animate__delay-1s">ViRent</h2>
+                    <p class="text-white animate__animated animate__fadeIn animate__delay-2s">ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan. Our unparalleled experience, high quality equipment and commitment to operational excellence is why cities and users consistently choose us to get them where they need to be. With us you will overcome any traffic jams, saving a lot of time on the trip. And time is money!</p>
+                </div>
+                <div class="flex relative -top-20">
+                    <div class="basis-1/3 m-2 p-4 bg-white rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInLeft animate__delay-1s">
+                        <div class="flex mb-2">
+                            <i class="fa-solid fa-helmet-safety text-3xl text-brand mr-2"></i>
+                            <h3 class="text-3xl">Safety first.</h3>
+                        </div>
+                        <p>Safety comes first and always at ViRent. It defines how we design and upgrade our vehicles, develop driver training and education, and work with cities to improve how streets are built to prioritize people over cars.</p>
+                    </div>
+                    <div class="basis-1/3 m-2 p-4 bg-white rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="flex mb-2">
+                            <i class="fa-solid fa-fire-flame-curved text-3xl text-brand mr-2"></i>
+                            <h3 class="text-3xl">Sustainability.</h3>
+                        </div>
+                        <p>Everywhere 'Green' with ViRent. Transport is the second largest contributor to global toxic gas emissions, mainly due to driving. To tackle climate change and make cities healthier and more livable, we need to develop urban transport towards a shared, electric and carbon-free future. Electric shared micromobility could be one of the most sustainable modes of transport in the world, replacing all car journeys of less than 10 kilometers. This is our goal.</p>
+                    </div>
+                    <div class="basis-1/3 m-2 p-4 bg-white rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInRight animate__delay-1s">
+                        <div class="flex mb-2">
+                            <i class="fa-solid fa-leaf text-3xl text-brand mr-2"></i>
+                            <h3 class="text-3xl">'Green' choice.</h3>
+                        </div>
+                        <p>ViRent ride uses 75% less carbon than a comparable car ride, and since every vehicle is powered by renewable energy, choosing ViRent over cars is always the right choice.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section h-screen">
+            <div class="mx-2">
+                <h1 class="text-6xl mb-10 animate__animated animate__fadeInLeft animate__delay-1s">Contact</h1>
+                <div class="flex mb-8 animate__animated animate__fadeInLeft animate__delay-1s">
+                    <i class="fa-solid fa-phone text-3xl mr-2"></i>
+                    <h1 class="text-3xl">+99871 200 03 73</h1>
+                </div>
+                <div class="flex animate__animated animate__fadeInLeft animate__delay-1s">
+                    <i class="fa-solid fa-envelope text-3xl mr-2"></i>
+                    <h1 class="text-3xl">virent2022@gmail.com</h1>
+                </div>
+            </div>
+        </section>
+        <section class="section h-screen">
+            <div class="flex items-center justify-center">
+                <a href="https://play.google.com/store/apps/details?id=cloud.togotech.virent.virent" class="animate__animated animate__fadeIn animate__delay-1s">
+                    <img src="assets/badge/google-play-badge.png" alt="google-play" width="300">
+                </a>
+                <a href="https://apps.apple.com/ru/app/virent/id6445976046" class="animate__animated animate__fadeIn animate__delay-1s">
+                    <img src="assets/badge/app-store-badge.png" alt="app-store" width="300">
+                </a>
+            </div>
+            <div class="flex flex-col items-center">
+                <h6>Terms of public offer:</h6>
+                <div class="flex">
+                    <div class="flex items-center m-2">
+                        <i class="fa-solid fa-download mr-1"></i>
+                        <a href="/assets/terms/public-offer-ru.docx" download>RU</a>
+                    </div>
+                    <div class="flex items-center m-2">
+                        <i class="fa-solid fa-download mr-1"></i>
+                        <a href="/assets/terms/public-offer-uz.docx" download>UZ</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/vendors/easings.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.extensions.min.js"></script>
+    <script>
+        new fullpage("#fullpage", {
+            anchors: ["home", "about", "whyvirent", "contact", "downloadapp"],
+            credits: {enabled: false, label: ""}
+        })
+    </script>
+</body>
+</html>
