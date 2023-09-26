@@ -103,3 +103,15 @@ function changeLanguage() {
 }
 
 changeLanguage()
+
+function openMenu() {
+    const el = document.getElementById("menu")
+    el.classList.remove("hidden")
+    el.classList.add("flex")
+}
+
+function closeMenu() {
+    const el = document.getElementById("menu")
+    el.classList.remove("flex")
+    el.classList.add("hidden")
+}

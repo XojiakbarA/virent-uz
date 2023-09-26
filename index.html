@@ -22,26 +22,44 @@
     </script>
 </head>
 <body class="dark:text-white">
+    <!--------------------- MENU BEGIN --------------------->
+    <div id="menu" class="z-50 absolute w-screen h-screen flex flex-col justify-center items-center" onclick="closeMenu()">
+        <ul class="grid grid-cols-1 gap-10 text-4xl">
+            <li><a class="about" href="#about">About</a></li>
+            <li><a class="whyvirent" href="#whyvirent">Why ViRent?</a></li>
+            <li><a class="contacts" href="#contact">Contacts</a></li>
+            <li>
+                <a class="downloadapp bg-brand rounded-full py-2 px-4 inline-block text-white hover:bg-transparent hover:text-brand hover:border hover:border-brand border border-transparent duration-300" href="#downloadapp">
+                    Download App
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--------------------- MENU END --------------------->
     <!--------------------- HEADER BEGIN --------------------->
     <nav id="header" class="flex items-center px-3 fixed w-screen z-10">
         <a class="flex-1 mr-10" href="#home">
             <img src="assets/logo/logo-dark.png" alt="logo"/>
         </a>
-        
+        <select id="langSelect" onchange="setLanguage()" class="bg-brand p-1 rounded-full text-white hover:bg-transparent hover:text-brand duration-300">
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+        </select>
+        <button class="border rounded px-2 py-1 ml-6 md:hidden" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
         <div class="hidden md:flex items-center">
-            <select id="langSelect" onchange="setLanguage()" class="bg-brand p-1 rounded-full text-white hover:bg-transparent hover:text-brand duration-300">
-                <option value="en">EN</option>
-                <option value="ru">RU</option>
-                <option value="uz">UZ</option>
-            </select>
             <ul class="text-start">
                 <li class="list-none inline-block px-5 hover:text-brand duration-300"><a class="about" href="#about">About</a></li>
                 <li class="list-none inline-block px-5 hover:text-brand duration-300"><a class="whyvirent" href="#whyvirent">Why ViRent?</a></li>
                 <li class="list-none inline-block px-5 hover:text-brand duration-300"><a class="contacts" href="#contact">Contacts</a></li>
+                <li class="list-none inline-block px-5 hover:text-brand duration-300">
+                    <a class="downloadapp bg-brand rounded-full py-2 px-4 inline-block text-white hover:bg-transparent hover:text-brand hover:border hover:border-brand border border-transparent duration-300" href="#downloadapp">
+                        Download App
+                    </a>
+                </li>
             </ul>
-            <a class="downloadapp bg-brand rounded-full py-2 px-4 inline-block text-white hover:bg-transparent hover:text-brand hover:border hover:border-brand border border-transparent duration-300" href="#downloadapp">
-                Download App
-            </a>
         </div>
     </nav>
     <!--------------------- HEADER END --------------------->
@@ -70,13 +88,13 @@
                     </div>
                     <div>
                         <h2 class="whoarewe 2xl:text-6xl xl:text-5xl lg:text-4xl text-4xl text-end animate__animated animate__fadeIn animate__delay-1s">Who Are We?</h2>
-                        <p class="whoareweDesc 2xl:text-xl lg:text-sm text-sm text-end animate__animated animate__fadeIn animate__delay-2s">ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan. We are committed to building a future where transportation is shared, affordable and environmentally friendly.</p>
+                        <p class="whoareweDesc 2xl:text-2xl text-sm text-end animate__animated animate__fadeIn animate__delay-2s">ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan. We are committed to building a future where transportation is shared, affordable and environmentally friendly.</p>
                     </div>
                 </div>
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <div class="mb-3">
                         <h2 class="whatwedo 2xl:text-6xl xl:text-5xl lg:text-4xl text-4xl animate__animated animate__fadeIn animate__delay-1s">What we do?</h2>
-                        <p class="whatwedoDesc 2xl:text-xl lg:text-sm text-sm animate__animated animate__fadeIn animate__delay-2s">We provide convenient and reliable short-term rental of electric scooters at an affordable price in major cities of Uzbekistan.</p>
+                        <p class="whatwedoDesc 2xl:text-2xl text-sm animate__animated animate__fadeIn animate__delay-2s">We provide convenient and reliable short-term rental of electric scooters at an affordable price in major cities of Uzbekistan.</p>
                     </div>
                     <div class="drop-shadow-xl flex flex-row justify-end animate__animated animate__fadeInRight animate__delay-1s">
                         <img class="rounded-xl" src="assets/images/about2.webp" alt="about1">
@@ -86,36 +104,36 @@
         </section>
         <!--------------------- ABOUT END --------------------->
         <!--------------------- WHYVIRENT BEGIN --------------------->
-        <section class="section h-screen">
-            <div class="relative">
-                <div class="max-h-96 blur-sm opacity-80 overflow-hidden">
-                    <img src="assets/images/whyvirent.jpeg" alt="whyvirent" width="100%">
+        <section class="section h-full">
+            <div class="absolute max-h-96 blur-sm opacity-80 overflow-hidden w-full">
+                <img src="assets/images/whyvirent.jpeg" alt="whyvirent" width="100%">
+            </div>
+            <div class="mt-16 mx-3">
+                <div class="mb-3">
+                    <h2 class="2xl:text-7xl lg:text-5xl text-4xl text-white leading-normal animate__animated animate__fadeIn animate__delay-1s">ViRent</h2>
+                    <p class="virentDesc 2xl:text-2xl text-sm text-white animate__animated animate__fadeIn animate__delay-2s">ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan. Our unparalleled experience, high quality equipment and commitment to operational excellence is why cities and users consistently choose us to get them where they need to be. With us you will overcome any traffic jams, saving a lot of time on the trip. And time is money!</p>
                 </div>
-                <div class="absolute left-0 top-10 mx-10">
-                    <h2 class="lg:text-4xl md:text-3xl xl:text-4xl text-white leading-normal animate__animated animate__fadeIn animate__delay-1s">ViRent</h2>
-                    <p class="virentDesc md:text-xs lg:text-base text-white animate__animated animate__fadeIn animate__delay-2s">ViRent is one of the first electric scooter sharing (rental) companies in Uzbekistan. Our unparalleled experience, high quality equipment and commitment to operational excellence is why cities and users consistently choose us to get them where they need to be. With us you will overcome any traffic jams, saving a lot of time on the trip. And time is money!</p>
-                </div>
-                <div class="flex relative -top-20 mx-10">
-                    <div class="basis-1/3 m-2 py-4 px-6 bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInLeft animate__delay-1s">
+                <div class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="py-2 px-3 md:py-3 md:px-4 2xl:py-5 2xl:px-7 bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInLeft animate__delay-1s">
                         <div class="flex mb-2">
-                            <i class="fa-solid fa-helmet-safety lg:text-3xl md:text-xl text-brand mr-2"></i>
-                            <h3 class="safetyFirst lg:text-3xl md:text-xl">Safety first.</h3>
+                            <i class="fa-solid fa-helmet-safety 2xl:text-5xl lg:text-3xl text-2xl text-brand mr-2"></i>
+                            <h3 class="safetyFirst 2xl:text-5xl lg:text-3xl text-2xl">Safety first.</h3>
                         </div>
-                        <p class="safetyFirstDesc md:text-xs">Safety comes first and always at ViRent. It defines how we design and upgrade our vehicles, develop driver training and education, and work with cities to improve how streets are built to prioritize people over cars.</p>
+                        <p class="safetyFirstDesc 2xl:text-2xl text-sm">Safety comes first and always at ViRent. It defines how we design and upgrade our vehicles, develop driver training and education, and work with cities to improve how streets are built to prioritize people over cars.</p>
                     </div>
-                    <div class="basis-1/3 m-2 py-4 px-6 bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="py-2 px-3 md:py-3 md:px-4 2xl:py-5 2xl:px-7 bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInUp animate__delay-1s">
                         <div class="flex mb-2">
-                            <i class="fa-solid fa-fire-flame-curved lg:text-3xl md:text-xl text-brand mr-2"></i>
-                            <h3 class="sustainability lg:text-3xl md:text-xl">Sustainability.</h3>
+                            <i class="fa-solid fa-fire-flame-curved 2xl:text-5xl lg:text-3xl text-2xl text-brand mr-2"></i>
+                            <h3 class="sustainability 2xl:text-5xl lg:text-3xl text-2xl">Sustainability.</h3>
                         </div>
-                        <p class="sustainabilityDesc md:text-xs">Everywhere 'Green' with ViRent. Transport is the second largest contributor to global toxic gas emissions, mainly due to driving. To tackle climate change and make cities healthier and more livable, we need to develop urban transport towards a shared, electric and carbon-free future. Electric shared micromobility could be one of the most sustainable modes of transport in the world, replacing all car journeys of less than 10 kilometers. This is our goal.</p>
+                        <p class="sustainabilityDesc 2xl:text-2xl text-sm">Everywhere 'Green' with ViRent. Transport is the second largest contributor to global toxic gas emissions, mainly due to driving. To tackle climate change and make cities healthier and more livable, we need to develop urban transport towards a shared, electric and carbon-free future. Electric shared micromobility could be one of the most sustainable modes of transport in the world, replacing all car journeys of less than 10 kilometers. This is our goal.</p>
                     </div>
-                    <div class="basis-1/3 m-2 py-4 px-6 bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInRight animate__delay-1s">
+                    <div class="py-2 px-3 md:py-3 md:px-4 2xl:py-5 2xl:px-7 bg-white dark:bg-slate-800 rounded-lg drop-shadow-lg hover:text-brand duration-300 animate__animated animate__fadeInRight animate__delay-1s">
                         <div class="flex mb-2">
-                            <i class="fa-solid fa-leaf lg:text-3xl md:text-xl text-brand mr-2"></i>
-                            <h3 class="greenchoice lg:text-3xl md:text-xl">'Green' choice.</h3>
+                            <i class="fa-solid fa-leaf 2xl:text-5xl lg:text-3xl text-2xl text-brand mr-2"></i>
+                            <h3 class="greenchoice 2xl:text-5xl lg:text-3xl text-2xl">'Green' choice.</h3>
                         </div>
-                        <p class="greenchoiceDesc md:text-xs">ViRent ride uses 75% less carbon than a comparable car ride, and since every vehicle is powered by renewable energy, choosing ViRent over cars is always the right choice.</p>
+                        <p class="greenchoiceDesc 2xl:text-2xl text-sm">ViRent ride uses 75% less carbon than a comparable car ride, and since every vehicle is powered by renewable energy, choosing ViRent over cars is always the right choice.</p>
                     </div>
                 </div>
             </div>
@@ -124,25 +142,25 @@
         <!--------------------- CONTACTS BEGIN --------------------->
         <section class="section h-screen">
             <div class="mx-10">
-                <h1 class="contacts lg:text-6xl md:text-4xl mb-8 animate__animated animate__fadeInLeft animate__delay-1s">Contacts</h1>
+                <h1 class="contacts 2xl:text-8xl lg:text-6xl text-5xl mb-8 animate__animated animate__fadeInLeft animate__delay-1s">Contacts</h1>
                 <div class="flex mb-6 animate__animated animate__fadeInLeft animate__delay-1s">
-                    <i class="fa-solid fa-phone lg:text-3xl md:text-xl mr-2"></i>
-                    <h1 class="lg:text-3xl md:text-xl">+99871 200 03 73</h1>
+                    <i class="fa-solid fa-phone lg:text-2xl md:text-xl mr-2"></i>
+                    <h1 class="lg:text-2xl md:text-xl">+99871 200 03 73</h1>
                 </div>
                 <div class="flex animate__animated animate__fadeInLeft animate__delay-1s">
-                    <i class="fa-solid fa-envelope lg:text-3xl md:text-xl mr-2"></i>
-                    <h1 class="lg:text-3xl md:text-xl">virent2022@gmail.com</h1>
+                    <i class="fa-solid fa-envelope lg:text-2xl md:text-xl mr-2"></i>
+                    <h1 class="lg:text-2xl md:text-xl">virent2022@gmail.com</h1>
                 </div>
             </div>
         </section>
         <!--------------------- CONTACTS END --------------------->
         <!--------------------- DOWNLOADAPP BEGIN --------------------->
         <section class="section h-screen">
-            <div class="flex items-center justify-center">
-                <a href="https://play.google.com/store/apps/details?id=cloud.togotech.virent.virent" class="animate__animated animate__fadeIn animate__delay-1s">
+            <div class="grid grid-cols-1 lg:grid-cols-2">
+                <a href="https://play.google.com/store/apps/details?id=cloud.togotech.virent.virent" class="mx-auto animate__animated animate__fadeIn animate__delay-1s">
                     <img src="assets/badge/google-play-badge.png" alt="google-play" width="300">
                 </a>
-                <a href="https://apps.apple.com/ru/app/virent/id6445976046" class="animate__animated animate__fadeIn animate__delay-1s">
+                <a href="https://apps.apple.com/ru/app/virent/id6445976046" class="mx-auto animate__animated animate__fadeIn animate__delay-1s">
                     <img src="assets/badge/app-store-badge.png" alt="app-store" width="300">
                 </a>
             </div>

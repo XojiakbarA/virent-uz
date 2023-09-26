@@ -17,6 +17,10 @@ body {
     backdrop-filter: blur(3px);
 }
 
+#menu {
+    backdrop-filter: blur(5px);
+}
+
 .floating { 
     animation-name: floating;
     animation-duration: 3s;
